@@ -42,7 +42,7 @@ router.delete("/users/:id", (req, res) => {
 //Editar un recurso específico
 router.put("/users/:id", (req, res) => {
   const { id } = req.params;
-  const { name, lastname, age, email } = req.body;
+  const { name, lastname, bank_account, address } = req.body;
 
   userSchema
     .updateOne({ _id: id }, { $set: { name, lastname, age, email } })

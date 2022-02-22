@@ -13,10 +13,12 @@ mongoose
   .catch((err) => console.error(err));
 
 const userSchemaRoutes = require("./routes/user_routes.js");
+const productSchemaRoutes = require("./routes/product_routes.js");
 
 execute_app.use(express.json());
 
 execute_app.use("/api", userSchemaRoutes);
+execute_app.use("/api", productSchemaRoutes);
 
 execute_app.listen(port, () =>
   console.log(`Listening on http://localhost:${port}`)

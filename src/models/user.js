@@ -9,13 +9,27 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  age: {
-    type: Number,
-    required: true,
-  },
-  email: {
+  bank_account: {
     type: String,
     required: true,
+  },
+  address: {
+    city: {
+      type: String,
+      required: true,
+    },
+    zip_code: {
+      type: Number,
+      required: true,
+    },
+    lat: {
+      type: Number,
+      required: true,
+    },
+    lon: {
+      type: Number,
+      required: true,
+    },
   },
 });
 
