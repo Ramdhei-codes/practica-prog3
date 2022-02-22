@@ -45,7 +45,7 @@ router.put("/users/:id", (req, res) => {
   const { name, lastname, bank_account, address } = req.body;
 
   userSchema
-    .updateOne({ _id: id }, { $set: { name, lastname, age, email } })
+    .updateOne({ _id: id }, { $set: { name, lastname, bank_account, address } })
     .then((data) => res.json(data))
     .catch((err) => res.json({ message: err }));
 });
